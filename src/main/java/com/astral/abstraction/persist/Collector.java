@@ -10,7 +10,7 @@ import java.util.Map;
 
 public abstract class Collector {
 
-    protected final Map<ItemData, MutableLong> collection = Maps.newConcurrentMap();
+    protected final Map<ItemData, MutableLong> collection = Maps.newHashMap();
 
     public MutableLong getAmount(Material material, short subId) {
         return collection.get(ItemData.values(material, subId));

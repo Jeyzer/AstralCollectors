@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public class VirtualCollectors {
 
-    private final Map<Short, VirtualCollector> collectors = Maps.newConcurrentMap();
+    private final Map<Short, VirtualCollector> collectors = Maps.newHashMap();
 
     public Optional<VirtualCollector> getCollector(Faction faction) {
         return faction.isWilderness() || faction.isWarZone() || faction.isSafeZone() ? Optional.empty() : Optional.ofNullable(collectors.get(getId(faction)));

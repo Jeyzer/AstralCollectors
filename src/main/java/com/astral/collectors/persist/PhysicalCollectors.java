@@ -19,7 +19,7 @@ public class PhysicalCollectors {
 
     private @Setter @Getter boolean valid = true;
 
-    private final Map<ChunkData, PhysicalCollector> collectors = Collections.synchronizedMap(Maps.newHashMap());
+    private final Map<ChunkData, PhysicalCollector> collectors = Maps.newHashMap();
 
     public void createCollector(Location location) {
         Validate.notNull(location, "Location param in collector creation method cannot be null!");

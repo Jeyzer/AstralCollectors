@@ -28,7 +28,7 @@ public class Menus {
 
     protected final Plugin plugin;
 
-    private final Map<Player, Menu> menusMap = Maps.newHashMap();
+    private final Map<Player, Menu> menusMap = Maps.newConcurrentMap();
 
     @Getter
     private final BukkitTask bukkitTask;
